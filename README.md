@@ -71,7 +71,7 @@ On the first run, you'll be prompted to:
 1. Log in to your Google account
 2. Grant permission to the application to manage Google Drive files
 
-After successful authentication, a `token.pickle` file will be created to store your credentials for future runs.
+After successful authentication, a `token.json` file will be created to store your credentials for future runs.
 
 ### Files Generated
 
