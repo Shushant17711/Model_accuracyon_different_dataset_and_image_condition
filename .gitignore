@@ -1,6 +1,6 @@
 # Google Drive API credentials and tokens
 credentials.json
-token.pickle
+token.json
 
 # Python
 __pycache__/

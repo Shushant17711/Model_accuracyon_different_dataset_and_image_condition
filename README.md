@@ -75,17 +75,23 @@ After successful authentication, a `token.pickle` file will be created to store 
 
 ### Files Generated
 
-- `token.pickle`: Stores authentication tokens (do not commit to version control)
+- `token.json`: Stores authentication tokens (do not commit to version control)
 - `credentials.json`: OAuth 2.0 credentials (do not commit to version control)
+
+### Important Notes
+
+**API Scope**: This script uses the `drive.file` scope, which only grants access to files and folders created by the application. This is a security best practice that limits access to only the folders created by this script. The script cannot access or modify other files in your Google Drive.
+
+**Duplicate Prevention**: The script checks for existing folders before creating new ones, so it's safe to run multiple times.
 
 ### Security Notes
 
-⚠️ **Important**: Never commit `credentials.json` or `token.pickle` to version control. These files contain sensitive authentication data.
+⚠️ **Important**: Never commit `credentials.json` or `token.json` to version control. These files contain sensitive authentication data.
 
 Add them to `.gitignore`:
 ```
 credentials.json
-token.pickle
+token.json
 ```
 
 ### Troubleshooting
@@ -93,11 +99,12 @@ token.pickle
 **Error: "credentials.json not found"**
 - Make sure you've downloaded and renamed your OAuth credentials file
 
-**Error: "The file token.pickle is missing"**
-- This is normal on first run. The script will generate it after authentication
-
 **Authentication issues**
-- Delete `token.pickle` and run the script again to re-authenticate
+- Delete `token.json` and run the script again to re-authenticate
+
+**Permission errors**
+- Ensure the Google Drive API is enabled in your Google Cloud project
+- Verify your OAuth consent screen is properly configured
 
 ### License
 
