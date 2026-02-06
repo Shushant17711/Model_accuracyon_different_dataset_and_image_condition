@@ -43,6 +43,7 @@ Research_Project/
 3. Choose "Desktop app" as the application type
 4. Download the credentials JSON file
 5. Rename it to `credentials.json` and place it in the project root directory
+   - See `credentials.json.example` for the expected format
 
 #### 3. Install Dependencies
 
